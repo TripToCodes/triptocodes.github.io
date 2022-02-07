@@ -1,5 +1,5 @@
 ___
-layout: post
+layout: single
 title: "SEB 36기 | Section 1 Review"
 ___
 
