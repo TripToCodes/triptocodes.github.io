@@ -1,7 +1,7 @@
-___
+---
 layout: post
-title: "SEB 36기 | Section 1 Review"
-___
+title:  "SEB 36기 Section1이 끝나고."
+---
 
 ## SEB 36기 Section1이 끝나고.
 
