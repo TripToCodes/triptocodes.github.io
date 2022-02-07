@@ -1,7 +1,9 @@
 ___
-layout: single
+
+layout: post
 title: "SEB 36기 | Section 1 Review"
 ___
+
 
 ## SEB 36기 Section1이 끝나고.
 
