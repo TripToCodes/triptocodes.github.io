@@ -1,5 +1,5 @@
 ---
-title: "알고리즘 정복 | Spiral Matrix in JS"
+title: "알고리즘 정복 - Spiral Matrix in JS"
 layout: single
 ---
 
