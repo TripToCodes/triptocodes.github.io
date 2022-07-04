@@ -25,7 +25,7 @@ title:  "비전공자에게 내새끼(나의 코딩) 설명하기 시리즈 02"
 
 
 ```js
-  const ModalBackdrop = styled.div` 
+const ModalBackdrop = styled.div` 
   // styled-components 라이브러리의 편리한 점은 같은 div라고 해도 
   // ModalBackdrop, ModalContainer와 같이 다른 직관적인 이름으로 지을 수 있다는 거야.
   opacity: 0; 
@@ -48,6 +48,7 @@ title:  "비전공자에게 내새끼(나의 코딩) 설명하기 시리즈 02"
     visibility: visible;
   }
 `;
+
 const ModalContainer = styled.div`
   opacity: 0;
   visibility: hidden;
@@ -69,6 +70,7 @@ const ModalContainer = styled.div`
     visibility: visible;
   }
 `;
+
 const ModalClose = styled.div`
   top: 10px;
   right: 10px;
@@ -87,6 +89,7 @@ const ModalClose = styled.div`
     display: block;
   }
 `;
+
 const ModalContent = styled.div`
   width: 100%;
   height: 100%;
