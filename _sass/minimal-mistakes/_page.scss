@@ -30,12 +30,11 @@ body {
           flex-direction: column;
 }
 
-.initial-content {
-  margin-left: 20%;
-  margin-right: 20%;
-},
+.initial-content,
 .search-content {
   flex: 1 0 auto;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 .page {
