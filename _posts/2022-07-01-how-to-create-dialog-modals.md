@@ -209,7 +209,8 @@ openModal: (state, action) => {
   if (componentName) { // 내가 열려는 모달이 componentsLookUp에 존재하니까 if문 안으로 들어가서 
     const SelectedComponent = componentsLookUp[componentName]; // ---> SelectedComponent = DeleteStudy
     if (SelectedComponent) { // DeleteStudy라고 하는 컴포넌트가 존재하니까 또 if문으로 들어가서 
-      renderComponent = <SelectedComponent {...childrenProps} />; // renderComponet에 DeleteStudy라는 이름의 컴포넌트를 할당한다.
+    // renderComponet에 DeleteStudy라는 이름의 컴포넌트를 할당한다.
+      renderComponent = <SelectedComponent {...childrenProps} />; 
     }
   }
   ...
