@@ -18,7 +18,8 @@ title:  "WYSIWYG 에디터, 만다오에서 배우다"
 - 매일, 매주 바뀌는 이 많은 이벤트 문구와 이미지, 프로모션 코드들은 개발자들이 마케팅 팀에서 받아와서 직접 넣는 건가? 
 - 그럼 마케터가 기획한 대로 페이지가 나왔는지 개발자는 마케팅 팀과 왔다갔다 컨펌 받고서야 배포하는 건가?
 - 아니면 마케터들이 코딩을 좀 배워서 HTML에 코드를 집어넣고 렌더링까지 확인하고 개발자에게 배포만 부탁하는 건가? 
-  ![](images/mandao_html.png)
+  ![mandao_html](https://user-images.githubusercontent.com/79065544/184528004-ac929df2-99d0-42a7-a6f9-4b70378b653b.png)
+
 - 마케팅 문구 좀 넣으려다가 엄한 코드 건드려서 에러나면 어떡하지? 
 
 
@@ -46,12 +47,17 @@ Jenkins는 지속적 통합(Continuous Integrations, 이하 CI)과 지속적 배
 
 
 1. 워크스페이스에서 캘린더뷰로 프로모션을 열람하고 관리할 수 있다.
-   ![](images/mandao_calendar.png)
+   ![mandao_calendar](https://user-images.githubusercontent.com/79065544/184528039-02664e6b-5ec4-47eb-8bb6-654a99b801d6.png)
+
 2. 텍스트, 이미지, YouTube, Lottie, 회전목마 등의 블록 단위로 화면을 구성하고 스타일링할 수 있다.
-   ![](images/mandao_block.png)
-   ![](images/mandao_stack.png)
+   <img width="1193" alt="mandao_block" style="width:600px;" src="https://user-images.githubusercontent.com/79065544/184528056-70842bb9-4969-4461-b861-f39b54c4bd03.png">
+
+   <img width="839" alt="mandao_stack" style="width:600px;" src="https://user-images.githubusercontent.com/79065544/184528061-47a2e624-3e99-46e8-89ab-1a8b49914c04.png">
+
 3. 그룹을 사용하여 복잡한 형태의 레이아웃을 만들 수 있다.
-   ![](images/mandao_group.png)
+
+   ![mandao_group](https://user-images.githubusercontent.com/79065544/184528255-9fb84311-605d-4bd3-9fd4-2244b01d0a6c.png)
+
 4. 쿠폰 다운로드 코드를 생성하고 버튼에 연결할 수 있다.
 5. 프로모션 화면에 사용될 이미지 등의 파일을 자동으로 S3에 업로드합니다.
 6. 베타와 운영 두 가지 배포를 재작업 없이 동시에 할 수 있다.
@@ -60,19 +66,20 @@ Jenkins는 지속적 통합(Continuous Integrations, 이하 CI)과 지속적 배
 
 ### 3. 따라하고 싶은 점
 
+
+  <img width="1579" alt="mandao_container" style="width:600px;" src="https://user-images.githubusercontent.com/79065544/184528102-b52719e7-f292-4f2a-aaf0-c3a19ef00eef.png">
 - 블록으로 생성하는 메타데이터: 
-  ![](images/mandao_container.png)
   만다오에서는 화면을 구성하는 요소 하나를 블록이라고 부르는데 모든 블록은 동일하게 Base를 상속하며 크게 Container와 Container가 아닌 것 두 가지로 구분된다. Container는 다른 블록을 자식으로 가질 수 있는 블록으로 페이지, 그룹, 슬라이드 등이 이에 해당되고 Container를 자식으로 가질 수도 있다. Container가 아닌 블록은 텍스트, 이미지, 비디오와 같은 작은 단위이다. 
 
   블록 안에서 텍스트나 이미지 등에 고유한 아이디가 저장되고 데이터 타입에 따라 string이나 이미지의 url이 저장된다. 데이터 타입이 container인 경우에는 children이라는 속성이 있고 배열 안에 각 블록의 고유한 아이디가 들어간다. 
 
   블록들은 에디터나 런타임 화면에서 이 순서에 따라 위에서 아래 또는 왼쪽에서 오른쪽으로 정렬된다. 블록은 템플릿으로 저장하여 언제든지 다시 꺼내어 쓸 수 있다. 리액트의 컴포넌트와 비슷한 개념이다. 
 
-### 마치며
+### 4. 마치며
 
 비개발자가 어쩔 수 없이 코드나 배포에 관여해야 했던 어려움을 직관적인 에디터를 개발함으로써 한 프로그램에서 모든 것을 끝낼 수 있도록 했다는 것이 인상깊었다. 그리고 에디터는 개발자가 아닌 사람들도 어렵지 않게 사용할 수 있게 직관적으로 만들어야 한다는 것을 배웠다. 만다오의 블록이 `<div>`와 같은 역할을 한다는 것이 매우 이해하기 쉬웠고 그 안에서 부모 안에 자식들이 담겨 캡슐화 되는 것이 재사용성이 높은 컴포넌트를 연상시켰다. 언젠가 나도 이와 비슷한 에디터를 꼭 만들고 싶다.
 
 
-레퍼런스
+<레퍼런스>
 1. [우아한평제들 기술 블로그 - 프로모션용 웹앱 빌더, 만다오](https://techblog.woowahan.com/2719/)
 2. [우아콘2021 - 배민은 개발자 없이 웹앱을 만듭니다](https://www.youtube.com/watch?v=BiLa7i81BcU&t=50s&ab_channel=%EC%9A%B0%EC%95%84%ED%95%9CTech)
