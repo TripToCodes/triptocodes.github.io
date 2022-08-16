@@ -26,11 +26,10 @@ title:  "WYSIWYG 에디터, 만다오에서 배우다"
 #### 답은?
 
 위와 같은 질문은 배민 블로그를 읽고 해소되었다. 
->놀랍게도 마케터들이 직접 한다! 👀
+  놀랍게도 마케터들이 직접 한다! 👀
+  마케터들이 Cyberduck, FileZilla, Jenkins 등을 사용하고 있었다!
 
->마케터들이 Cyberduck, FileZilla, Jenkins 등을 사용하고 있었다!
-
-💡 여기서 Cyberduck, FileZilla는 파일 전송 프로토콜(File Transfer Protocol, 이하 FTP)을 보다 간편하게 사용할 수 있는 데스크탑 도구이다. 우리는 FTP 서버로부터 파일을 받거나 서버로 파일을 보낸다. 여러 개의 파일을 동시에 전송할 수 있고 전송 일정을 예약할 수도 있다. 
+>💡 여기서 Cyberduck, FileZilla는 파일 전송 프로토콜(File Transfer Protocol, 이하 FTP)을 보다 간편하게 사용할 수 있는 데스크탑 도구이다. 우리는 FTP 서버로부터 파일을 받거나 서버로 파일을 보낸다. 여러 개의 파일을 동시에 전송할 수 있고 전송 일정을 예약할 수도 있다. 
 Jenkins는 지속적 통합(Continuous Integrations, 이하 CI)과 지속적 배포(Continuous Delivery, CD)를 위한 도구이다. 쉽게 말해서 모든 개발자가 각자 개발하고 프로젝트 막판에 가서 한꺼번에 통합하겠다고 하다가 에러 대환장 파티를 하는 것이 아니라 개발 중에 지속적으로 코드를 중앙 코드와 통합하고 빌드와 테스트를 진행하고, 코드가 통과하면 테스트 서버와 운영 서버에 곧바로 그 내용을 배포하는 것이다. 
 
 
@@ -38,7 +37,7 @@ Jenkins는 지속적 통합(Continuous Integrations, 이하 CI)과 지속적 배
 
 그래서 배민 개발자들은 마케터들이 코드 없이 이벤트 페이지를 만들 수 있는 만다오라는 [WYSIWYG](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=mong9editor&logNo=221503735490) 방식의 웹 에디터를 개발한 것이다. 
 
-💡 WYSIWYG는 What You See Is What You Get의 약자이다. 위지위그 에디터의 예는 블로그를 적을 때 쓰는 보통 스마트 에디터이다. 우리는 에디터 덕분에 글을 쓰며 편하게 줄바꿈을 하고 직관적으로 텍스트를 꾸미지만 사실은 `<p>` `<span style=>` 같은 HTML 소스가 자동으로 입력되고 있는 것이다.
+>💡 WYSIWYG는 What You See Is What You Get의 약자이다. 위지위그 에디터의 예는 블로그를 적을 때 쓰는 보통 스마트 에디터이다. 우리는 에디터 덕분에 글을 쓰며 편하게 줄바꿈을 하고 직관적으로 텍스트를 꾸미지만 사실은 `<p>` `<span style=>` 같은 HTML 소스가 자동으로 입력되고 있는 것이다.
 
 
 
@@ -59,9 +58,9 @@ Jenkins는 지속적 통합(Continuous Integrations, 이하 CI)과 지속적 배
    ![mandao_group](https://user-images.githubusercontent.com/79065544/184528255-9fb84311-605d-4bd3-9fd4-2244b01d0a6c.png)
 
 4. 쿠폰 다운로드 코드를 생성하고 버튼에 연결할 수 있다.
-5. 프로모션 화면에 사용될 이미지 등의 파일을 자동으로 S3에 업로드합니다.
+5. 프로모션 화면에 사용될 이미지 등의 파일을 자동으로 S3에 업로드한다.
 6. 베타와 운영 두 가지 배포를 재작업 없이 동시에 할 수 있다.
-7. 배포 후 프로모션 URL을 제공합니다.
+7. 배포 후 프로모션 URL을 제공한다.
 
 
 ### 3. 따라하고 싶은 점
