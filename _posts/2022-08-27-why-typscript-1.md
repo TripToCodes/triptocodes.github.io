@@ -73,6 +73,7 @@ console.log(typeof foo); // function
 ### 3. 전역 변수는 최대한 사용하지 않는다.
 - 변수는 자신이 선언된 위치에서 생성되고 소멸한다. 예를 들어 함수 내부에서 선언된 지역 변수는 함수가 호출되면 생성되고 함수가 종료하면 소멸한다. 그런데 전역 변수는 전역 객체의 프로퍼티가 되고 브라우저 환경에서 전역 객체는 window이므로 `var`로 선언한 변수는 웹페이지를 닫을 때까지 유효하게 된다. 이렇게 생명 주기가 길면 메모리 리소스도 오랜 기간 소비하고 전역 변수의 상태가 변경될 수 있는 시간도 길고 기회도 많아진다. 가뜩이나 전역 변수는 어디서든 참조하고 할당할 수 있기 때문에 이 범위가 크면 클수록 상태가 변경되고 예측 못할 오류가 발생할 확률이 높아지는 것이다.
 - 전역 변수의 사용을 억제하려면 모든 코드를 즉시 실행 함수로 감싸면 된다. 그러면 변수는 함수의 지역 변수가 된다.
+
 ```js
 (function () {
   var foo = 10; // 즉시 실행 함수의 지역 변수
@@ -81,6 +82,7 @@ console.log(typeof foo); // function
 
 console.log(foo); // ReferenceError:foo is not defined
 ```
+
 - 클래스를 모방해서 관련이 있는 변수와 함수를 모아 즉시 실행 함수로 감싸 하나의 모듈을 만드는 모듈 패턴을 쓸 수도 있다.
 ```js
 var Counter = (function () { // 객체를 반환하는 즉시 실행 함수
@@ -100,10 +102,7 @@ console.log(Counter.num); // undefined, private 변수는 외부로 노출 안 �
 console.log(Counter.increase()); // 1
 console.log(Counter.increase()); // 2
 console.log(Counter.decrease()); // 1
-
 ```
-
-
 ### 4. var 보다는 const를 사용한다.
 - ES6를 사용한다면 `var` 키워드는 사용하지 않는다.
 - 재할당이 필요한 경우에 한정해 `let` 키워드를 사용하고 변수의 스코프는 최대한 좁게 만든다.
