@@ -84,6 +84,7 @@ console.log(foo); // ReferenceError:foo is not defined
 ```
 
 - 클래스를 모방해서 관련이 있는 변수와 함수를 모아 즉시 실행 함수로 감싸 하나의 모듈을 만드는 모듈 패턴을 쓸 수도 있다.
+
 ```js
 var Counter = (function () { // 객체를 반환하는 즉시 실행 함수
   var num = 0; // private 변수
@@ -103,6 +104,7 @@ console.log(Counter.increase()); // 1
 console.log(Counter.increase()); // 2
 console.log(Counter.decrease()); // 1
 ```
+
 ### 4. var 보다는 const를 사용한다.
 - ES6를 사용한다면 `var` 키워드는 사용하지 않는다.
 - 재할당이 필요한 경우에 한정해 `let` 키워드를 사용하고 변수의 스코프는 최대한 좁게 만든다.
